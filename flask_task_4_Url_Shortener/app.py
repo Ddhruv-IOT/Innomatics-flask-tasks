@@ -6,8 +6,10 @@ app = Flask(__name__)
 def index():
         return "<h1>Hello There</h1>"
 
+@app.route("/1", methods=["GET", "POST"])
+def page():
+        return render_template("base.html")
+
 
 if __name__ == "__main__":
-    print("Hi")
     app.run(debug=True)
-    app.run(use_reloader=True)
