@@ -33,7 +33,7 @@
       }
 
       .headings,
-      .subhdr {
+      .subhdr, .ftr {
         padding: 20px 0px 0px 0px;
         color: whitesmoke;
         text-align: center;
@@ -48,6 +48,26 @@
         color: aqua;
       }
 
+      .mq {
+        max-width: 30%;
+      }
+
+      .ftr {
+        padding: 0px 0px 0px 0px;
+        margin: -20px;
+      }
+
+      @media only screen and (max-width: 720px) {
+        .mq {
+          max-width: 50%;
+        }
+      }
+
+      @media only screen and (max-width: 500px) {
+        .mq {
+          max-width: 100%;
+        }
+      }
     </style>
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -85,11 +105,20 @@
     <h2 class="headings">{% block head %} {% endblock %}</h2>
     <h5 class="subhdr">{% block title %} {% endblock %}</h5>
     <div class="d-flex justify-content-center">
-      <div class="w-100" style="max-width: 300px;">
-      <p class="inf">{% block info %} {% endblock %}</p>
+      <div class="w-100" style="max-width: 300px">
+        <p class="inf">{% block info %} {% endblock %}</p>
       </div>
     </div>
-    
-    {% block body %} {% endblock %}
+    <div class="d-flex justify-content-center">
+      <div class="mq w-100 justify-content-center">
+        {% block body %} {% endblock %}
+      </div>
+    </div>
+    <div class="mb-4"></div>
+    <div class="d-flex justify-content-center">
+      <div class="ftr mq w-100 justify-content-center">
+        {% block footer %} {% endblock %}
+      </div>
+    </div>
   </body>
 </html>
