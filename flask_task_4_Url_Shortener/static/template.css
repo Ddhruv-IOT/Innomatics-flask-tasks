@@ -1,0 +1,27 @@
+.cur {
+    border-radius: 14px;
+  }
+
+  .Ax,
+  .Bx {
+    color: white;
+    margin: 30px;
+  }
+
+  .bttn {
+    margin: 20px 0px 0px 0px;
+    width: 50%;
+  }
+
+  a {
+    padding: 0 10px;
+    color: lime !important;
+  }
+
+  .zl {
+    font-size: 12px;
+  }
+
+  .z1{
+    margin: 0 20px;
+  }
