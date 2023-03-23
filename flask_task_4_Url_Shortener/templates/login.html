@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+<span>{% block head%} Welcome back to D Short Link {% endblock %} </span>
+<span>{% block title %} Login | SignIn {% endblock %}</span>
+
+<span
+  >{% block info %} Hello There!
+  <br />
+  So, which URL would you like to shorten today ? .... A website, post link...or something else  {% endblock %}</span
+>
+
+{% block body %}
+<link rel="stylesheet" href="{{ url_for('static', filename='template.css') }}"></link>
+
+<div class="Ax">
+  <form method="POST" action="/">
+    <div class="mb-3">
+      <label for="user_name" class="form-label clr">Your User Name </label>
+      <input
+        type="text"
+        name="user_name"
+        id="user_name"
+        required
+        class="form-control cur"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="pwd" class="form-label clr"> Secret Words 🤫</label>
+      <input
+        class="form-control cur"
+        type="password"
+        name="pwd"
+        id="pwd"
+        required
+      />
+    </div>
+    <div class="d-flex justify-content-center">
+      <button type="submit" class="bttn btn btn-primary cur">
+        Continue
+      </button>
+    </div>
+  </form>
+</div>
+{% endblock %} 
+
+{% block footer %} <span>Not a user yet ? <a href="/register">Register</a> </span>{% endblock %}
