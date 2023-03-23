@@ -9,23 +9,74 @@
   Are you looking to shorten URL, your search ends here. Register with us now
   and try our services. {% endblock %}</span
 >
-<span
-  >{% block body %}
-  <form>
+
+{% block body %}
+<style>
+  .cur {
+    border-radius: 14px;
+  }
+
+  .Ax,
+  .Bx {
+    color: white;
+    margin: 30px;
+  }
+
+  .bttn {
+    margin: 20px 0px 0px 0px;
+    width: 50%;
+  }
+
+  a {
+    padding: 0 10px;
+    color: lime !important;
+  }
+
+  .zl {
+    font-size: 12px;
+  }
+
+  .z1{
+    margin: 0 20px;
+  }
+</style>
+
+<div class="Ax">
+  <form method="POST" action="/">
     <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      <label for="user_name" class="form-label clr">User Name </label>
+      <input
+        type="text"
+        name="user_name"
+        id="user_name"
+        required
+        class="form-control cur"
+      />
     </div>
+
     <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
+      <label for="pwd" class="form-label clr"> Password</label>
+      <input
+        class="form-control cur"
+        type="password"
+        name="pwd"
+        id="pwd"
+        required
+      />
     </div>
-    <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    <div class="mb-3 form-check z1">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+      <label class="form-check-label zl" for="exampleCheck1"
+        >I agree to terms and conditions</label
+      >
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="d-flex justify-content-center">
+      <button type="submit" class="bttn btn btn-primary cur">
+        Create Account
+      </button>
+    </div>
   </form>
-  {% endblock %}
-</span>
+</div>
+{% endblock %} 
+
+{% block footer %} <span>Alredy a user ? <a>Login </a> </span>{% endblock %}
