@@ -11,35 +11,7 @@
 >
 
 {% block body %}
-<style>
-  .cur {
-    border-radius: 14px;
-  }
-
-  .Ax,
-  .Bx {
-    color: white;
-    margin: 30px;
-  }
-
-  .bttn {
-    margin: 20px 0px 0px 0px;
-    width: 50%;
-  }
-
-  a {
-    padding: 0 10px;
-    color: lime !important;
-  }
-
-  .zl {
-    font-size: 12px;
-  }
-
-  .z1{
-    margin: 0 20px;
-  }
-</style>
+<link rel="stylesheet" href="{{ url_for('static', filename='template.css') }}"></link>
 
 <div class="Ax">
   <form method="POST" action="/">
@@ -79,4 +51,4 @@
 </div>
 {% endblock %} 
 
-{% block footer %} <span>Alredy a user ? <a>Login </a> </span>{% endblock %}
+{% block footer %} <span>Alredy a user ? <a href="/">Login </a> </span>{% endblock %}
