@@ -10,6 +10,10 @@ def index():
 def page():
         return render_template("base.html")
 
+@app.route("/register", methods=["GET", "POST"])
+def page2():
+        return render_template("register.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
