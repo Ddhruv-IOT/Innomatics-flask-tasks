@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+<span>{% block head%}  Hello Ddhruv! {% endblock %} </span>
+<span>{% block title %} {% endblock %}</span>
+
+<span
+  >{% block info %} Steps to shorten URL
+  <br />
+  Enter the URL in the given field and click Generate to get the URL
+    Then click Copy button to copy it!
+    <br/> It's simple... No Rocket Sciences 😄 
+   {% endblock %}</span
+>
+
+{% block body %}
+<link rel="stylesheet" href="{{ url_for('static', filename='template.css') }}"></link>
+
+<div class="Ax">
+  <form method="POST" action="/">
+    <div class="mb-3">
+      <label for="user_input" class="form-label clr">Enter a URL </label>
+      <input
+        type="text"
+        name="user_input"
+        id="user_input"
+        required
+        class="form-control cur"
+      />
+    </div>
+    <div class="d-flex justify-content-center">
+      <button type="submit" class="bttn btn btn-primary cur">
+       Generate
+      </button>
+    </div>
+  </form>
+</div>
+
+<div class="d-flex justify-content-center">
+<p style="color: aqua;"><b>D Short URL </b><span><i><a href="#"> www.sxnslkx.xcom </a></i></span></p>
+</div>
+<div class="d-flex justify-content-center">
+  <button type="submit" class="bttn btn btn-primary cur">
+   Copy URL
+  </button>
+</div>
+{% endblock %} 
+
+
+
+{% block footer %} {% endblock %}
