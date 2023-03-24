@@ -44,4 +44,12 @@
 </div>
 {% endblock %} 
 
-{% block footer %} <span>Not a user yet ? <a href="/register">Register</a> </span>{% endblock %}
+{% block footer %} <span>Not a user yet ? <a href="/register">Register</a> </span>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<p class="flashes" style="color:red !important;"> Info:  {{message}} </p>
+{% endfor %}
+{% endif %}
+{% endwith %}
+{% endblock %}
