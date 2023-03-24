@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='template.css') }}"></link>
 
 <div class="Ax">
-  <form method="POST" action="/">
+  <form method="POST" action="/register">
     <div class="mb-3">
       <label for="user_name" class="form-label clr">User Name </label>
       <input
@@ -51,4 +51,12 @@
 </div>
 {% endblock %} 
 
-{% block footer %} <span>Alredy a user ? <a href="/">Login </a> </span>{% endblock %}
+{% block footer %} <span>Alredy a user ? <a href="/">Login </a> </span>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<p class="flashes" style="color:red !important;"> Info:  {{message}} </p>
+{% endfor %}
+{% endif %}
+{% endwith %}
+{% endblock %}
