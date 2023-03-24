@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<span> {% block head %} Your History {% endblock %}</span>
+<span>{% block title %} {% endblock %}</span>
+<span
+  >{% block info %} Don't you worry!
+  <br />
+  Your data is safe with us :) 
+   {% endblock %} </span>
+
+   <span>{% block tbl %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='template.css') }}"></link>
+    <div class="d-flex justify-content-center">
+    <div class="c1"> 
+    <table>
+        <tr>
+            <th>S.No</th>
+            <th>Input URL</th>
+            <th>Output URL</th>
+        </tr>
+        {%for i in range(0, len)%}
+
+        <tr>
+            <td>{{i + 1}}</td>
+            <td><a href="{{user_data[i].input_data}}" target="_blank">{{user_data[i].input_data}}</a></td>
+            <td><a href="{{user_data[i].output_data}}" target="_blank">{{user_data[i].output_data}}</a></td>
+        </tr>
+        {%endfor%}
+    </table>
+    </div>
+    </div>
+    {% endblock %}
+  
+   </span>
+
+   
