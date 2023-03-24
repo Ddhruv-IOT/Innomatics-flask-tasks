@@ -52,6 +52,10 @@
         max-width: 30%;
       }
 
+      .mq2{
+        max-width: 70%;
+      }
+
       .ftr {
         padding: 0px 0px 0px 0px;
         margin: -20px;
@@ -72,7 +76,7 @@
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">&lt;D.S.L&gt;</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -87,16 +91,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="/short">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="/history">History</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
             </li>
           </ul>
         </div>
@@ -112,6 +113,11 @@
     <div class="d-flex justify-content-center">
       <div class="mq w-100 justify-content-center">
         {% block body %} {% endblock %}
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="mq2 w-100 justify-content-center">
+        {% block tbl %} {% endblock %}
       </div>
     </div>
     <div class="mb-4"></div>
