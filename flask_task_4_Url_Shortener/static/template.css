@@ -25,3 +25,28 @@
   .z1{
     margin: 0 20px;
   }
+
+  .c1{
+    color: whitesmoke !important;
+    width: 800% !important;
+  }
+
+  table{
+    width: 100%;
+    table-layout: fixed;
+    overflow: hidden;
+  }
+
+  table, tr, th, td{
+    border: 2px solid gray;
+    padding: 5px;  
+    text-align: center;
+  }
+
+  th, tr, td {
+    height: 100px;
+    width: 10calc(100vw/3);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
