@@ -38,8 +38,15 @@
 <div class="d-flex justify-content-center">
 <p style="color: aqua;"><b>D Short URL </b><span><i><a href="{{s_url}}" target="_blank"> {{s_url}} </a></i></span></p>
 </div>
+<script>
+  function myFunction() {
+    var copyText = "{{s_url}}";
+    navigator.clipboard.writeText(copyText);
+    
+  }
+</script>
 <div class="d-flex justify-content-center">
-  <button type="submit" class="bttn btn btn-primary cur">
+  <button onclick="myFunction()" class="bttn btn btn-primary cur">
    Copy URL
   </button>
 </div>
